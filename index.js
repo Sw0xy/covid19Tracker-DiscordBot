@@ -21,29 +21,7 @@ client.on("ready", () => {
     const executeFunc = require(`./events/${event}`);
     executeFunc(client);
   });
-
-  var arrayOfStatus = [
-    `${client.users.cache.size} users`,
-    `${client.guilds.cache.size} Servers`,
-    `${client.channels.cache.size} Channels`,
-    `!help for commands`,
-  ];
-  setInterval(() => {
-    var arrayOfStatus = [
-      `${client.users.cache.size} users`,
-      `Covid 19 Tracker🦠`,
-      `${client.guilds.cache.size} Servers!!`,
-    ];
-  }, 3000);
-
-  let index = 1;
-  setInterval(() => {
-    if (index === arrayOfStatus.length) index = 0;
-    const status = arrayOfStatus[index];
-    client.user.setActivity(status);
-    index++;
-  }, 40000);
-
+  client.user.setActivity("!help", { type: "WATCHING" });
   console.log(`logged in as ${client.user.username} BOT ✅`);
 });
 
