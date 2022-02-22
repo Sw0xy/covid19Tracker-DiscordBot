@@ -14,7 +14,6 @@ module.exports = {
         .get(`${url}/countries/${country}`)
         .then((res) => {
           const data = res.data;
-          console.log(data.confirmed.value);
           const Recovered = data.confirmed.value - data.deaths.value;
           const coronaEmbed = new MessageEmbed()
           .setColor("#0099ff")
@@ -42,7 +41,7 @@ module.exports = {
 
     setTimeout(() => {
         fetchData(country);
-        }, 3000);
+        }, 1400);
     
   },
 };

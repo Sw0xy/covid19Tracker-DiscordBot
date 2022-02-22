@@ -10,8 +10,10 @@ module.exports = {
         .addFields(
             { name: "Command", value: "`!country <country>`", inline: true },
             { name: "Example", value: "`!country india`", inline: true },
-            { name: "Description", value: "Get the data of the country" },
-            { name: "Command", value: "`!help`", inline: true },
+            { name: "Description", value: "Get covid19 data of the country", inline: true },
+            { name: "Command", value: "`!world`", inline: true },
+            { name: "Example", value: "`!world`", inline: true },
+            { name: "Description", value: "Get covid19 data of the world", inline: true },  
         )
         .setThumbnail(message.author.avatarURL())
         .setTimestamp()
