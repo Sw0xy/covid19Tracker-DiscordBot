@@ -6,9 +6,8 @@ module.exports = (client) => {
     if (message.content.startsWith(prefix) == false) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const commandName = args.shift().toLowerCase();
-    const command = client.commands.get(commandName)
+    const command = client.commands.get(commandName);
     if ( command === undefined) return;
     command.execute(message, args);
-    console.log(commandName);
   });
 };

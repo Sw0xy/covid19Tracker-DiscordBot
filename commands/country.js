@@ -15,7 +15,7 @@ module.exports = {
         .then((res) => {
           const data = res.data;
           console.log(data.confirmed.value);
-          const Recovered = data.confirmed.value - data.deaths.value 
+          const Recovered = data.confirmed.value - data.deaths.value;
           const coronaEmbed = new MessageEmbed()
           .setColor("#0099ff")
           .setTitle('COVID-19 Tracker')
@@ -34,7 +34,7 @@ module.exports = {
           
         })
         .catch((err) => {
-          console.log(err);
+          message.channel.send(`${country} is not a valid country`);
         });
     };
 
